@@ -1,9 +1,9 @@
 # Device Setup Instructions
 1. Flash the appropriate raspberry pi os onto the device storage
-2. Connect the device to wifi
+2. Connect the device to wifi<br>
    a. Optionally connect the device to RaspberryPi Connect for remote shell use
-3. Install the 'requests' and 'picamera2' libraries
-   In terminal:
+3. Install the 'requests' and 'picamera2' libraries<br>
+   In terminal:  
    a. sudo apt install requests
    b. sudo apt install picamera2
 4. Install and connect to Tailscale
