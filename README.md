@@ -1,5 +1,5 @@
 # Device Setup Instructions
-### These instructions are for a RaspberryPi Device
+### These instructions are for RaspberryPi hardware
 1. Flash the appropriate RaspberryPi OS onto the device storage<br>
 2. Connect the device to wifi<br>
    a. Optionally connect the device to RaspberryPi Connect for remote shell use.<br>
