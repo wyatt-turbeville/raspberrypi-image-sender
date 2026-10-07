@@ -1,12 +1,13 @@
-import os, datetime, time, socket, requests, re
-import Picamera2
+import os, datetime, time, requests, json
+from picamera2 import Picamera2
 
 current_dateTime = datetime.datetime.now()
 picam2 = Picamera2()
 
-# take picture and save to specified path
-host_name = socket.gethostbyname
-file_name = f"{host_name}_plot_{current_dateTime}.jpg"
+with open("values.json", "r") as file:
+    data = json.load(file)
+
+file_name = f"device{data['device_id']}_plot_{current_dateTime}.jpg"
 
 target_dir = "~/Pictures/"
 full_dir = os.path.expanduser(target_dir)
@@ -16,17 +17,15 @@ config = picam2.create_still_configuration(main={"size": (3280, 2464)})
 picam2.configure(config)
 
 picam2.start()
-time.sleep(1)
+time.sleep(2)
 picam2.capture_file(file_path)
-time.sleep(1)
+time.sleep(2)
 picam2.stop()
 
-url = "http://http://100.76.229.28:8000/save_image/"
-cleaned_text = re.sub(r"\D", "", host_name) 
-clean_number = int(cleaned_text)
+url = f"http://{data['target_ip']}/save_image/"
 
 body_data = {
-    "cameraID": clean_number
+    "cameraID": data['device_id']
 }
 
 with open(file_path, "rb") as image_file:
