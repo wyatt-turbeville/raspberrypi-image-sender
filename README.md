@@ -4,7 +4,7 @@
    a. Optionally connect the device to RaspberryPi Connect for remote shell use.<br>
 3. Install the 'requests' and 'picamera2' libraries<br>
    In terminal:<br>
-   a. sudo apt install requests<br>
+   a. sudo apt install python3-requests<br>
    b. sudo apt install picamera2<br>
 4. Install and connect to Tailscale<br>
    In terminal:<br>
