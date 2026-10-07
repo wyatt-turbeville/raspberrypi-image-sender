@@ -14,7 +14,7 @@
    c. follow the auth link and add the device to the same Tailnet as the file receiving device.<br>
 5. Download the project files from github<br>
    In the home directory from terminal:<br>
-   a. git clone<br>
+   a. git clone https://github.com/wyatt-turbeville/raspberrypi-image-sender.git<br>
 6. Edit the values.json file to be correct<br>
    a. "target_ip": "X.X.X.X:Port" must be changed to the ipv4 of the file receiving device on their shared Tailnet.<br>
    b. "device_id": (int) is expecting any integer to define who it is among other file sending devices.<br>
