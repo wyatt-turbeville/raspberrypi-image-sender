@@ -22,6 +22,6 @@
 7. Schedule this application to run in crontab<br>
    In terminal:<br>
    a. crontab -e<br>
-   b. 0 * * * * /absolute/path/to/app.py<br>
+   b. 0 * * * * python3 /absolute/path/to/app.py<br>
    An easy way to find the path is by running 'realpath app.py' inside the same directory as app.py in terminal.<br>
    This line runs hourly, it can be modified to fit your needs.<br>
