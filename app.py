@@ -1,7 +1,7 @@
 import os, datetime, time, requests, json
 from picamera2 import Picamera2
 
-current_dateTime = datetime.datetime.now()
+current_dateTime = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
 picam2 = Picamera2()
 
 with open("values.json", "r") as file:
@@ -30,8 +30,7 @@ body_data = {
 
 with open(file_path, "rb") as image_file:
     files = {"image": image_file}
-
-response = requests.post(url, data=body_data, files=files)
+    response = requests.post(url, data=body_data, files=files)
 
 if (response.json().get("status") == "success"):
     os.remove(file_path)
