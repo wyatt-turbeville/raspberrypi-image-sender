@@ -4,7 +4,11 @@ from picamera2 import Picamera2
 current_dateTime = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
 picam2 = Picamera2()
 
-with open("values.json", "r") as file:
+target_dir = "~/raspberrypi-image-sender/"
+full_dir = os.path.expanduser(target_dir)
+file_path = os.path.join(full_dir, "values.json")
+
+with open(file_path, "r") as file:
     data = json.load(file)
 
 file_name = f"device{data['device_id']}_plot_{current_dateTime}.jpg"
