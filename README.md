@@ -5,7 +5,8 @@
 3. Install the 'requests' and 'picamera2' libraries<br>
    In terminal:<br>
    a. sudo apt install python3-requests<br>
-   b. sudo apt install picamera2<br>
+   b. sudo apt install python3-picamera2<br>
+   These libraries come preinstalled on some versions.<br>
 4. Install and connect to Tailscale<br>
    In terminal:<br>
    a. curl -fsSL https://tailscale.com/install.sh | sh<br>
